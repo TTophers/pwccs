@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peace With Christ Christian School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+          playfair: ['"Playfair Display"', 'serif'],
+          cursive: ['"Great Vibes"', 'cursive'],
+          },
+          colors: {
+            primary: "#532782"
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="font-[Inter] text-gray-800">
+
+  <!-- TOP BAR -->
+  <div class="bg-primary text-white text-sm py-3 px-6 flex justify-between items-center">
+    <div class="flex flex-col md:flex-row gap-2 md:gap-6">
+      <span class="flex items-center gap-2">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <a href="tel:+13037667116" class="hover:underline">
+          SCHOOL PHONE: 303.766.7116
+        </a>
+      </span>
+      <span class="flex items-center gap-2">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        <a href="tel:+13036998687" class="hover:underline">
+          EARLY LEARNING CENTER PHONE: 303-699-8687
+        </a>
+      </span>
+    </div>
+    <div class="flex gap-3">
+      <img src="imgs/Social_fb.png" class="w-8 h-8 rounded-full bg-white/30"></img>
+      <img src="imgs/Social_ig.png" class="w-8 h-8 rounded-full bg-white/30"></img>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <div id="main-navbar" class="bg-white py-6 px-6 sticky top-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+    <!-- LEFT LINKS -->
+    <div class="hidden md:flex flex-1 justify-end gap-6 text-sm tracking-widest text-gray-600">
+
+      <!-- ABOUT -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">ABOUT</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Our Story</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Mission</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACADEMICS -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">ACADEMICS</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Programs</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Curriculum</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADMISSIONS -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">ADMISSIONS</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Apply</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Tuition</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LOGO -->
+    <a href="/" class="block text-center mx-8">
+      <img id="navbar-logo" src="imgs/logo.png" alt="Peace With Christ Christian School Logo" class="h-24 w-auto mx-auto transition-all duration-300" />
+    </a>
+
+    <!-- RIGHT LINKS -->
+    <div class="hidden md:flex flex-1 justify-start gap-6 text-sm tracking-widest text-gray-600">
+
+      <!-- STUDENT LIFE -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">STUDENT LIFE</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Clubs</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Athletics</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARENT LIFE -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">PARENT LIFE</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Resources</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Calendar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="relative group">
+        <a href="#" class="hover:text-black">CONTACT</a>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+          <div class="bg-white shadow-lg">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Email Us</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 whitespace-nowrap">Location</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- HAMBURGER (MOBILE ONLY) -->
+    <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-[5px] z-50 relative">
+      <span class="w-6 h-[2px] bg-black"></span>
+      <span class="w-6 h-[2px] bg-black"></span>
+      <span class="w-6 h-[2px] bg-black"></span>
+    </button>
+    
+
+    </div>
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden flex-col px-6 pb-6 pt-4 text-sm tracking-widest text-gray-700 space-y-2">
+
+      <!-- ABOUT -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="about">
+          ABOUT <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Our Story</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Mission</a>
+        </div>
+      </div>
+
+      <!-- ACADEMICS -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="academics">
+          ACADEMICS <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Programs</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Curriculum</a>
+        </div>
+      </div>
+
+      <!-- ADMISSIONS -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="admissions">
+          ADMISSIONS <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Apply</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Tuition</a>
+        </div>
+      </div>
+
+      <!-- STUDENT LIFE -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="student">
+          STUDENT LIFE <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Clubs</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Athletics</a>
+        </div>
+      </div>
+
+      <!-- PARENT LIFE -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="parent">
+          PARENT LIFE <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Resources</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Calendar</a>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="border-b py-2">
+        <button class="w-full flex justify-between items-center" data-accordion="contact">
+          CONTACT <span>+</span>
+        </button>
+        <div class="hidden pl-4 mt-2 text-gray-600">
+          <a href="#" class="block">Email Us</a>
+          <div class="h-px bg-gray-200 my-2 w-full"></div>
+          <a href="#" class="block">Location</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COMPACT CTA BAR (scroll activated) -->
+  <div id="cta-compact" class="hidden fixed left-0 w-full bg-[#532782] text-white z-40 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <span class="text-sm tracking-wide text-[#b7a57a]">
+        Become an Eagle Today
+      </span>
+      <a href="#" class="bg-white text-[#532782] px-4 py-2 text-sm tracking-widest hover:opacity-90 transition">
+        GET STARTED
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="relative h-[500px] w-full">
+
+    <!-- BACKGROUND (replaced with img tag) -->
+    <img src="imgs/hero.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover" />
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-x-0 top-[120px] bottom-[120px] bg-white/70 flex items-center justify-center">
+
+      <div class="text-center">
+        <h1 class="text-6xl font-extrabold tracking-wide text-black">
+          WE ARE PEACE
+        </h1>
+        <p class="mt-4 text-6xl italic text-gray-600 font-cursive">
+          Welcome
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SECTION: INTRO TEXT -->
+<section class="bg-[#efefef] py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="text-4xl font-light text-[#b7a57a] tracking-wide mb-6">
+      Every Student Matters...Every Moment Counts
+    </h2>
+
+    <div class="space-y-5 text-gray-700 text-lg leading-relaxed">
+      <p>
+        Join a vibrant, diverse educational community that strives to love students and their families as they grow,
+        academically, personally, and spiritually.
+      </p>
+
+      <p>
+        Peace With Christ is located in SE Aurora, Colorado, serving students in preschool through Eighth Grade.
+      </p>
+
+      <p>
+        Come experience everything that makes our school the faith-based family that nurtures successful students with
+        skills needed to serve our 21st Century world.
+      </p>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="mt-10 flex justify-center gap-4">
+      <a href="#" class="border border-gray-600 px-6 py-3 text-sm tracking-widest hover:bg-gray-800 hover:text-white transition">
+        LEARN MORE
+      </a>
+      <a href="#" class="border border-gray-600 px-6 py-3 text-sm tracking-widest hover:bg-gray-800 hover:text-white transition">
+        GET STARTED
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION: THEME BANNER -->
+<section class="relative">
+
+  <img src="imgs/smallhands.jpg" alt="Theme Background" class="absolute inset-0 w-full h-full object-cover" />
+
+  <!-- Purple overlay -->
+  <div class="absolute inset-0 bg-[#532782]/40"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-16 flex items-center gap-10">
+
+    <!-- LEFT IMAGE PLACEHOLDER -->
+    <img src="imgs/hearthands.jpg" alt="Theme Image" class="hidden md:block w-72 h-72 object-cover shadow-lg flex-shrink-0" />
+
+    <!-- TEXT -->
+    <div class="text-white max-w-3xl">
+      <h3 class="text-3xl font-light leading-snug mb-6">
+        The 2025-26 school year theme is<br/>
+        “Serving Christ with a Grateful Heart.”
+      </h3>
+
+      <p class="text-lg leading-relaxed text-white/90">
+        “And whatever you do, in word or deed, do everything in the name of
+        the Lord Jesus, giving thanks to God the Father through him.”
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION: CTA STRIP -->
+<section id="cta-strip" class="bg-[#532782] py-10 text-center transition-all duration-300">
+  <h3 class="text-3xl font-light text-[#b7a57a] tracking-wide">
+    Are You Ready to Become An Eagle?
+  </h3>
+  <p class="text-white/90 mt-2">
+    Questions? 
+    <a href="tel:+13037667116" class="underline hover:text-white">303.766.7116 (K-8)</a>
+    &nbsp;|
+    <a href="tel:+13036998687" class="underline hover:text-white">303.699.8687 (ELC)</a>
+  </p>
+  <div id="cta-buttons" class="mt-6 flex justify-center gap-4">
+    <a href="#" class="border border-white-900 px-6 py-3 text-sm text-white tracking-widest hover:bg-gray-800 hover:text-white transition">
+      LEARN MORE
+    </a>
+    <a href="#" class="border border-white-900 px-6 py-3 text-sm text-white tracking-widest hover:bg-gray-800 hover:text-white transition">
+      GET STARTED
+    </a>
+  </div>
+</section>
+
+
+<!-- MAP SECTION -->
+<section class="bg-white py-12">
+  <div class="w-full px-0 mx-auto">
+    <div class="w-full h-[500px]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.6588212987263!2d-104.77474402402636!3d39.65739227157177!2m3!1f0!2f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c8997037e7ed5%3A0xd7120ee3bce0c02!2sPeace%20With%20Christ%20Christian%20School!5e0!3m2!1sen!2sus!4v1781459503789!5m2!1sen!2sus"
+        class="w-full h-full border-0 block"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER TOP STRIP -->
+<div class="bg-[#532782] h-10 w-full"></div>
+
+<!-- FOOTER MAIN -->
+<footer class="bg-[#efefef] pt-14 pb-20 px-6">
+
+  <!-- TOP TEXT -->
+  <div class="text-center mb-14">
+    <h3 class="text-3xl font-light text-[#b7a57a] tracking-wide">
+      Questions? 303.766.7116 (K-8) 303.699.8687 (ELC)
+    </h3>
+  </div>
+
+  <!-- GRID -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+    <!-- COLUMN 1 -->
+    <div>
+      <!-- LOGO PLACEHOLDER -->
+      <img src="imgs/logo.png" class="w-48 h-20  mb-6"></img>
+
+      <p class="text-gray-700 leading-relaxed">
+        3290 S. Tower Rd.<br/>
+        Aurora, CO 80013
+      </p>
+
+      <p class="mt-6 text-gray-600 italic">
+        “Home of the Eagles”
+      </p>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div>
+      <h4 class="text-gray-500 tracking-widest text-sm mb-6">
+        STAY CONNECTED
+      </h4>
+
+      <div class="space-y-6 text-gray-700 text-sm">
+
+        <div>
+          <p class="font-semibold">
+            <a href="tel:+13037667116" class="hover:underline">303.766.7116 (K-8)</a>
+          </p>
+          <p class="text-gray-500">Fax: 303.699.2777</p>
+          <p class="underline">pwccs@pwclc.org</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">
+            <a href="tel:+13036998687" class="hover:underline">303.699.8687 (ELC)</a>
+          </p>
+          <p class="text-gray-500">Fax: 303.699.2777</p>
+          <p class="underline">elc@pwclc.org</p>
+        </div>
+
+        <div>
+          <p class="font-semibold">
+            <a href="tel:+13036935618" class="hover:underline">303.693.5618 (PWC)</a>
+          </p>
+          <p class="text-gray-500">Fax: 303.699.2777</p>
+          <p class="underline">pwcoffice@pwclc.org</p>
+        </div>
+
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="flex gap-4 mt-8">
+        <img src="imgs/Social_ig.png"
+        class="w-10 h-10 border border-gray-400 rounded-full"></img>
+        <img src="imgs/Social_fb.png" 
+        class="w-10 h-10 border border-gray-400 rounded-full"></img>
+      </div>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div>
+      <h4 class="text-gray-500 tracking-widest text-sm mb-6">
+        QUICK LINKS
+      </h4>
+
+      <ul class="space-y-4 text-sm text-gray-700 tracking-wide">
+        <li>HOME</li>
+        <li>GET STARTED</li>
+        <li>UPCOMING EVENTS</li>
+        <li>FASTDIRECT</li>
+        <li>TUITION</li>
+        <li>PARENT HANDBOOK</li>
+        <li>CONTACT US</li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div>
+      <h4 class="text-gray-500 tracking-widest text-sm mb-6">
+        MEMBER OF THE
+      </h4>
+
+      <!-- LOGO PLACEHOLDER -->
+      <img src="imgs/logo-720-lcms.png" class=" w-60 h-auto mb-8"></img>
+
+      <h4 class="text-gray-500 tracking-widest text-sm mb-4">
+        ACCREDITED BY THE
+      </h4>
+
+      <!-- MULTIPLE LOGO PLACEHOLDERS -->
+      <div class="space-y-4">
+        <img src="imgs/NLSA-LOGO-e1659478498616-768x201.png" class="w-60 h-auto "></img>
+        <img src="imgs/co_cde__dept_cmyk-768x138.jpg" class="w-60 h-auto "></img>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+<script>
+  document.querySelectorAll('[data-accordion]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.parentElement;
+      const content = parent.querySelector('div');
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        btn.querySelector('span').textContent = '−';
+      } else {
+        content.classList.add('hidden');
+        btn.querySelector('span').textContent = '+';
+      }
+    });
+  });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
