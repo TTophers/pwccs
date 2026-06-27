@@ -200,97 +200,108 @@
     </div>
   </div>
 
-<!-- HERO -->
-<section class="relative h-[50vh] flex items-center justify-center text-center text-white">
-  <img src="imgs/maphero.jpeg" class="absolute inset-0 w-full h-full object-cover" />
-  <div class="absolute inset-0 bg-black/50"></div>
-  <div class="relative z-10">
-    <h1 class="text-4xl md:text-5xl font-playfair">Visit Us</h1>
-    <p class="text-2xl mt-4 font-cursive text-[#b7a57a]">We’d Love to Welcome You</p>
-  </div>
-</section>
+  <section class="max-w-4xl mx-auto px-6 py-16">
 
-<!-- QUICK INFO BAR -->
-<section class="bg-[#532782] text-white py-6 px-6">
-  <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap- text-sm tracking-wide">
-    <div class="flex items-center gap-2">
-      <i data-lucide="map-pin"></i>
-      <span>3290 S. Tower Rd, Aurora, CO</span>
-    </div>
-    <div class="flex items-center gap-2">
-      <i data-lucide="phone"></i>
-      <span>303.766.7116</span>
-    </div>
-    <div class="flex items-center gap-2">
-      <i data-lucide="clock"></i>
-      <span>Mon–Fri: 8:00 AM – 4:00 PM</span>
-    </div>
-  </div>
-</section>
-
-
-<!-- MAP SECTION -->
-<section class="py-16 px-6 bg-white">
-  <div class="max-w-7xl mx-auto">
-    <div class="w-full h-[400px] md:h-[500px]">
-      <!-- REPLACE THIS IFRAME WITH YOUR GOOGLE MAP -->
-      <iframe
-        src="https://www.google.com/maps?q=Peace+With+Christ+Christian+School&output=embed"
-        class="w-full h-full border-0"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ADDRESS + DIRECTIONS -->
-<section class="py-16 px-6 bg-[#f7f7f7]">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-
-    <div>
-      <h2 class="text-3xl font-playfair text-[#532782] mb-6">Our Location</h2>
-      <p class="text-gray-700 leading-relaxed mb-6">
-        Peace With Christ Christian School<br/>
-        3290 S. Tower Rd<br/>
-        Aurora, CO 80013
-      </p>
-
-      <a href="https://www.google.com/maps?q=Peace+With+Christ+Christian+School"
-         target="_blank"
-         class="inline-block bg-[#532782] text-white px-6 py-3 text-sm tracking-widest hover:opacity-90 transition">
-        GET DIRECTIONS
-      </a>
-    </div>
-
-    <div>
-      <h2 class="text-3xl font-playfair text-[#532782] mb-6">School Hours</h2>
-      <div class="space-y-4 text-gray-700">
-        <div class="flex justify-between">
-          <span>Monday – Friday</span>
-          <span>8:00 AM – 4:00 PM</span>
-        </div>
-        <div class="flex justify-between">
-          <span>Saturday</span>
-          <span>Closed</span>
-        </div>
-        <div class="flex justify-between">
-          <span>Sunday</span>
-          <span>Closed</span>
-        </div>
-
-        <div class="border-t pt-4 mt-6"></div>
-
-        <div class="flex justify-between">
-          <span>ELC (Mon–Fri)</span>
-          <span>7:00 AM – 6:00 PM</span>
-        </div>
+    <h2 class="text-3xl font-semibold text-[#532782] mb-4">
+      V.I.P. PROGRAM VOLUNTEER
+    </h2>
+  
+    <p class="text-gray-700 mb-6">
+      SIGN-UP FOR THE VOLUNTEER OPPORTUNITIES THAT YOU ARE INTERESTED IN!
+    </p>
+  
+    <p class="text-gray-700 mb-10">
+      We hope you will find one or more areas to serve in and help KEEP PWCCS a GREAT SCHOOL!  Note that some tasks are one-time while others are on-going.  Questions?  Contact the school office via FastDirect or 303-766-7116.
+    </p>
+  
+    <form id="vipForm" class="space-y-8">
+  
+      <!-- NAME INFO -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <input class="border p-3 rounded" name="parent_first" placeholder="PARENT NAME (required) First Name" required />
+        <input class="border p-3 rounded" name="parent_last" placeholder="Last Name" required />
+  
+        <input class="border p-3 rounded" name="student_first" placeholder="STUDENT NAME (required) First Name" required />
+        <input class="border p-3 rounded" name="student_last" placeholder="Last Name" required />
+  
+        <input class="border p-3 rounded md:col-span-2" name="email" placeholder="Email (required)" required />
+        <input class="border p-3 rounded md:col-span-2" name="phone" placeholder="Phone Number (required)" required />
       </div>
-    </div>
-
-  </div>
-</section>
-
+  
+      <!-- CLASSROOM -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#532782] mb-3">
+          CLASSROOM VOLUNTEER OPPORTUNITIES
+        </h3>
+  
+        <div class="space-y-2 text-gray-700">
+  
+          <label><input type="checkbox" name="roles" value="ROOM PARENT* (DAYTIME)"> ROOM PARENT* (DAYTIME) Work with teacher/other parents to plan activities/parties</label><br>
+          <label><input type="checkbox" name="roles" value="ASSISTANT ROOM PARENT * (DAYTIME)"> ASSISTANT ROOM PARENT * (DAYTIME) Assist Room Parent</label><br>
+          <label><input type="checkbox" name="roles" value="CLASSROOM/TEACHER ASSISTANT * (DAYTIME)"> CLASSROOM/TEACHER ASSISTANT * (DAYTIME) Grade papers; read/write/math with small groups; assist teacher</label><br>
+          <label><input type="checkbox" name="roles" value="DRIVER* (DAYTIME)"> DRIVER* (DAYTIME) Drive for field trips/sports for Gr. 4-8</label><br>
+          <label><input type="checkbox" name="roles" value="COPY ASSISTANT (DAYTIME)"> COPY ASSISTANT (DAYTIME) Copy service for teacher/staff</label><br>
+  
+        </div>
+  
+        <p class="text-sm text-gray-500 mt-2">*BACKGROUND CHECK NEEDED</p>
+      </div>
+  
+      <!-- GENERAL -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#532782] mb-3">
+          GENERAL SCHOOL VOLUNTEER OPPORTUNITIES
+        </h3>
+  
+        <div class="space-y-2 text-gray-700">
+  
+          <label><input type="checkbox" name="roles" value="LIBRARY ASSISTANT* (DAYTIME)"> LIBRARY ASSISTANT* (DAYTIME) Shelve books; check books in and out</label><br>
+          <label><input type="checkbox" name="roles" value="ART ASSISTANT * (DAYTIME)"> ART ASSISTANT * (DAYTIME) Assist with displays and other help for teacher</label><br>
+          <label><input type="checkbox" name="roles" value="P.E. ASSISTANT* (DAYTIME)"> P.E. ASSISTANT* (DAYTIME) Assist P.E. teacher with classes</label><br>
+          <label><input type="checkbox" name="roles" value="COACH/ASSISANT COACH* (AFTER SCHOOL)"> COACH/ASSISANT COACH* (AFTER SCHOOL) Volleyball, Cross Country, Basketball, Track -- girls’ & boys’ teams</label><br>
+          <label><input type="checkbox" name="roles" value="REFEREE/SCORING/TIMEKEEPER* (AFTER SCHOOL)"> REFEREE/SCORING/TIMEKEEPER* (AFTER SCHOOL) Volleyball and Basketball home games</label><br>
+          <label><input type="checkbox" name="roles" value="ACTIVITY CLUB LEADER * (AFTER SCHOOL)"> ACTIVITY CLUB LEADER * (AFTER SCHOOL) Propose to start a club for educational enrichment of students</label><br>
+          <label><input type="checkbox" name="roles" value="PHOTOGRAPHER/YEARBOOK ASST.* (ONGOING)"> PHOTOGRAPHER/YEARBOOK ASST.* (ONGOING) Assist coordinator as needed with pictures/design/planning</label><br>
+          <label><input type="checkbox" name="roles" value="SNOW REMOVAL (DAYTIME)"> SNOW REMOVAL (DAYTIME) Keep sidewalks/entrance safe at arrival and dismissal times</label><br>
+  
+        </div>
+  
+        <p class="text-sm text-gray-500 mt-2">* BACKGROUND CHECK NEEDED</p>
+      </div>
+  
+      <!-- SPECIAL EVENTS -->
+      <div>
+        <h3 class="text-xl font-semibold text-[#532782] mb-3">
+          SPECIAL EVENTS
+        </h3>
+  
+        <div class="space-y-2 text-gray-700">
+  
+          <label><input type="checkbox" name="roles" value="FUNDRAISERS (OCCATIONAL)"> FUNDRAISERS (OCCATIONAL) Promotion, distribution, collection, other needs??</label><br>
+          <label><input type="checkbox" name="roles" value="SOARING EAGLE OBSTACLE COURSE* (SEPTEMBER)"> SOARING EAGLE OBSTACLE COURSE* (SEPTEMBER) Serve snacks/water, direct kids, cheer on!</label><br>
+          <label><input type="checkbox" name="roles" value="GRANDPARENT DAY (NOVEMBER)"> GRANDPARENT DAY (NOVEMBER) Snacks/food, set-up, take-down</label><br>
+          <label><input type="checkbox" name="roles" value="CHRISTMAS SERVICE RECEPTION (DECEMBER)"> CHRISTMAS SERVICE RECEPTION (DECEMBER) Donate cookies, set-up, take-down</label><br>
+          <label><input type="checkbox" name="roles" value="FAMILY DANCE (WINTER)"> FAMILY DANCE (WINTER) Help with set-up, take-down, other tasks where help is needed</label><br>
+          <label><input type="checkbox" name="roles" value="TEACHER APPRECIATION WEEK (SPRING)"> TEACHER APPRECIATION WEEK (SPRING) Plan events, treats...</label><br>
+          <label><input type="checkbox" name="roles" value="END OF SCHOOL YEAR EVENT (MAY)"> END OF SCHOOL YEAR EVENT (MAY) Help with set-up, take-down, other tasks where help is needed</label><br>
+  
+        </div>
+  
+        <p class="text-sm text-gray-500 mt-2">
+          * BACKGROUND CHECK NEEDED. YOU WILL HAVE OPPORTUNITIES THROUGHOUT THE YEAR TO SIGN UP FOR SPECIAL EVENTS AS NEEDED.
+        </p>
+      </div>
+  
+      <!-- SUBMIT -->
+      <button
+        type="submit"
+        class="bg-[#532782] text-white px-6 py-3 rounded-lg hover:opacity-90"
+      >
+        Submit
+      </button>
+  
+    </form>
+  </section>
 
 <!-- FOOTER TOP STRIP -->
 <div class="bg-[#532782] h-10 w-full"></div>
