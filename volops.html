@@ -25,7 +25,6 @@
 </head>
 <body class="font-[Inter] text-gray-800">
 
-  <!-- TOP BAR -->
   <div class="bg-primary text-white text-sm py-3 px-6 flex justify-between items-center">
     <div class="flex flex-col md:flex-row gap-2 md:gap-6">
       <span class="flex items-center gap-2">
@@ -45,12 +44,15 @@
         </a>
       </span>
     </div>
-    <div class="flex gap-3">
-      <img src="imgs/Social_fb.png" class="w-8 h-8 rounded-full bg-white/30"></img>
-      <img src="imgs/Social_ig.png" class="w-8 h-8 rounded-full bg-white/30"></img>
+    <div class="flex gap-3 items-center ml-auto shrink-0">
+      <img src="imgs/Social_fb.png" class="w-8 h-8 rounded-full bg-white/30">
+      <img src="imgs/Social_ig.png" class="w-8 h-8 rounded-full bg-white/30">
+      <a href="loggin.html" class="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
+        <img src="imgs/w.png" class="w-4 h-4">
+      </a>
     </div>
   </div>
-
+  
   <!-- NAVBAR -->
   <div id="main-navbar" class="bg-white py-6 px-6 sticky top-0 z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
@@ -417,10 +419,84 @@
   </div>
 
 </footer>
+
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>
   lucide.createIcons();
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("vipForm");
+  
+    if (!form) {
+      console.error("VIP form not found");
+      return;
+    }
+  
+    const SUPABASE_URL = "https://mvjxloioivrwilvctuck.supabase.co/rest/v1/vip_volunteer_submissions";
+    const SUPABASE_KEY = "sb_publishable_3wIM9TeWTITDH-vA1W6iFA_H7n087c3";
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const btn = form.querySelector("button[type='submit']");
+      btn.disabled = true;
+      btn.textContent = "Submitting...";
+  
+      // Collect checkbox roles (IMPORTANT)
+      const roles = Array.from(
+        document.querySelectorAll('input[name="roles"]:checked')
+      ).map(el => el.value);
+  
+      // Build payload
+      const payload = {
+        parent_first: form.parent_first.value,
+        parent_last: form.parent_last.value,
+        student_first: form.student_first.value,
+        student_last: form.student_last.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        roles: roles.length ? roles : null
+      };
+  
+      try {
+        const res = await fetch(SUPABASE_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": SUPABASE_KEY,
+            "Authorization": `Bearer ${SUPABASE_KEY}`,
+            "Prefer": "return=minimal"
+          },
+          body: JSON.stringify(payload)
+        });
+  
+        if (!res.ok) {
+          const errText = await res.text();
+          throw new Error(errText);
+        }
+  
+        // Success UI
+        btn.textContent = "Submitted ✓";
+        btn.classList.add("bg-green-600");
+  
+        form.reset();
+  
+      } catch (err) {
+        console.error("Submit error:", err);
+        btn.textContent = "Error — try again";
+        btn.classList.add("bg-red-600");
+  
+      } finally {
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = "Submit";
+          btn.classList.remove("bg-green-600", "bg-red-600");
+        }, 2500);
+      }
+    });
+  });
+  </script>
 <script>
   document.querySelectorAll('[data-accordion]').forEach(btn => {
     btn.addEventListener('click', () => {

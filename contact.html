@@ -45,9 +45,12 @@
         </a>
       </span>
     </div>
-    <div class="flex gap-3">
-      <img src="imgs/Social_fb.png" class="w-8 h-8 rounded-full bg-white/30"></img>
-      <img src="imgs/Social_ig.png" class="w-8 h-8 rounded-full bg-white/30"></img>
+    <div class="flex gap-3 items-center ml-auto shrink-0">
+      <img src="imgs/Social_fb.png" class="w-8 h-8 rounded-full bg-white/30">
+      <img src="imgs/Social_ig.png" class="w-8 h-8 rounded-full bg-white/30">
+      <a href="loggin.html" class="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
+        <img src="imgs/w.png" class="w-4 h-4">
+      </a>
     </div>
   </div>
 
@@ -235,32 +238,90 @@
         <div class="bg-white p-6 rounded-2xl shadow">
           <h3 class="text-xl font-semibold text-gray-800 mb-2">Call the Office</h3>
           <p class="text-gray-600 mb-3">Have a quick question? Give us a call during school hours.</p>
-          <p class="font-medium text-gray-800">(XXX) XXX-XXXX</p>
+          <p class="font-medium text-gray-800">303.693.5618</p>
         </div>
 
-        <!-- Schedule Tour -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Schedule a Tour</h3>
-          <p class="text-gray-600 mb-3">Come see our school in action! We’d love to meet you.</p>
+        <section class="py-12 bg-gray-50">
+          <div class="max-w-4xl mx-auto px-4">
+            <form id="contact_submissions" data-form-purpose="contact_submissions" class="bg-white rounded-lg shadow-lg p-6 md:p-8 space-y-5">
+              <div>
+                <h3 class="text-2xl font-semibold text-[#532782]">Tour Request</h3>
+                <p class="text-sm text-gray-500 mt-1">Share a few details and our school office will follow up with you.</p>
+              </div>
 
-          <!-- INSERT TOUR FORM HERE -->
-          <div class="border-2 border-dashed border-gray-300 p-6 text-center text-gray-500 rounded-lg">
-            Tour form goes here
+              <div class="grid sm:grid-cols-2 gap-4">
+                <label class="block">
+                  <span class="block text-sm font-medium text-gray-700 mb-2">First Name</span>
+                  <input name="first_name" type="text" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#532782]" />
+                </label>
+                <label class="block">
+                  <span class="block text-sm font-medium text-gray-700 mb-2">Last Name</span>
+                  <input name="last_name" type="text" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#532782]" />
+                </label>
+              </div>
+
+              <label class="block">
+                <span class="block text-sm font-medium text-gray-700 mb-2">Student Grade Level Interest</span>
+                <select name="grade_interest" required class="w-full border border-gray-300 rounded-md px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-[#532782]">
+                  <option value="">Select...</option>
+                  <option>Kindergarten</option>
+                  <option>1st Grade</option>
+                  <option>2nd Grade</option>
+                  <option>3rd Grade</option>
+                  <option>4th Grade</option>
+                  <option>5th Grade</option>
+                  <option>6th Grade</option>
+                  <option>7th Grade</option>
+                  <option>8th Grade</option>
+                </select>
+              </label>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <label class="block">
+                  <span class="block text-sm font-medium text-gray-700 mb-2">Email</span>
+                  <input name="email" type="email" required class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#532782]" />
+                </label>
+                <label class="block">
+                  <span class="block text-sm font-medium text-gray-700 mb-2">Phone Number <span class="font-normal text-gray-500">(optional)</span></span>
+                  <input name="phone" type="tel" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#532782]" />
+                </label>
+              </div>
+
+              <fieldset>
+                <legend class="block text-sm font-medium text-gray-700 mb-3">Preferred Method of Contact (optional)</legend>
+                <div class="flex gap-3">
+                  <label class="flex items-center gap-2 border px-4 py-3 rounded-md">
+                    <input type="radio" name="preferred_contact" value="Email" /> Email
+                  </label>
+                  <label class="flex items-center gap-2 border px-4 py-3 rounded-md">
+                    <input type="radio" name="preferred_contact" value="Phone" /> Phone
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="block text-sm font-medium text-gray-700 mb-3">Requesting a Tour?</legend>
+                <div class="flex gap-3">
+                  <label class="flex items-center gap-2 border px-4 py-3 rounded-md">
+                    <input type="radio" name="requesting_tour" value="Yes" /> Yes
+                  </label>
+                  <label class="flex items-center gap-2 border px-4 py-3 rounded-md">
+                    <input type="radio" name="requesting_tour" value="No" /> No
+                  </label>
+                </div>
+              </fieldset>
+
+              <label class="block">
+                <span class="block text-sm font-medium text-gray-700 mb-2">Questions or Comments</span>
+                <textarea name="message" rows="4" class="w-full border border-gray-300 rounded-md px-4 py-3"></textarea>
+              </label>
+
+              <button type="submit" class="w-full bg-[#532782] text-white py-3">REQUEST TOUR</button>
+            </form>
           </div>
-        </div>
+        </section>
 
-        <!-- File Concern -->
-        <div class="bg-white p-6 rounded-2xl shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Share a Concern</h3>
-          <p class="text-gray-600 mb-3">
-            We value open communication. If you have a concern, question, or feedback, please let us know.
-          </p>
 
-          <!-- OPTIONAL FORM -->
-          <div class="border-2 border-dashed border-gray-300 p-6 text-center text-gray-500 rounded-lg">
-            Complaint / feedback form goes here
-          </div>
-        </div>
 
       </div>
 
@@ -273,7 +334,13 @@
 
           <!-- INSERT GOOGLE MAP IFRAME HERE -->
           <div class="border-2 border-dashed border-gray-300 h-64 flex items-center justify-center text-gray-500 rounded-lg">
-            Google Map goes here
+            <iframe
+            src="https://www.google.com/maps?q=Peace+With+Christ+Christian+School&output=embed"
+            class="w-full h-full border-0"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        
           </div>
         </div>
 
@@ -421,6 +488,67 @@
   lucide.createIcons();
 </script>
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact_submissions");
+  
+    if (!form) {
+      console.error("Form not found");
+      return;
+    }
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const submitBtn = form.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+  
+      const data = new FormData(form);
+  
+      const payload = {
+        first_name: data.get("first_name"),
+        last_name: data.get("last_name"),
+        grade_interest: data.get("grade_interest"),
+        email: data.get("email"),
+        phone: data.get("phone") || null,
+        preferred_contact: data.get("preferred_contact") || null,
+        requesting_tour: data.get("requesting_tour") || null,
+        message: data.get("message") || null,
+      };
+  
+      try {
+        const res = await fetch(
+          "https://mvjxloioivrwilvctuck.supabase.co/rest/v1/contact_submissions",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "apikey": "sb_publishable_3wIM9TeWTITDH-vA1W6iFA_H7n087c3",
+              "Authorization": "Bearer sb_publishable_3wIM9TeWTITDH-vA1W6iFA_H7n087c3",
+              "Prefer": "return=minimal",
+            },
+            body: JSON.stringify(payload),
+          }
+        );
+  
+        if (!res.ok) throw new Error("Failed to submit");
+  
+        form.reset();
+        submitBtn.textContent = "Submitted!";
+      } catch (err) {
+        console.error(err);
+        submitBtn.textContent = "Error. Try again.";
+      } finally {
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "REQUEST TOUR";
+        }, 2000);
+      }
+    });
+  });
+  </script>
+<script>
+
   document.querySelectorAll('[data-accordion]').forEach(btn => {
     btn.addEventListener('click', () => {
       const parent = btn.parentElement;
@@ -436,6 +564,8 @@
     });
   });
 </script>
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>

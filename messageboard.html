@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Messages</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="dashboard.js" defer></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .message-enter { animation: slideIn 0.3s ease-out; }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .skeleton { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .5; }
+    }
+    .tab-active {
+      background-color: #e5e7eb;
+      color: #532782;
+      border-color: #532782;
+      box-shadow: 0 4px 10px rgba(83, 39, 130, 0.15);
+      transform: translateY(-1px);
+    }
+
+    .tab-active p {
+      color: #532782 !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-semibold text-gray-900">Client Messages</h1>
+      <div class="flex space-x-2">
+        <button id="refresh-btn" class="px-3 py-1.5 text-sm bg-indigo-600 text-white rounded">Refresh</button>
+        <button id="logout-btn" class="px-3 py-1.5 text-sm bg-red-500 text-white rounded hover:bg-red-600 transition">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-6">
+
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <button id="tour-requests-btn" class="bg-white p-4 rounded border hover:shadow-md transition text-left">
+        <p class="text-sm text-gray-500"></p>
+        <p class="text-2xl font-bold text-[#532782]">Tour Requests</p>
+      </button>
+
+      <button id="vip-program-btn" class="bg-white p-4 rounded border hover:shadow-md transition text-left">
+        <p class="text-sm text-gray-500"></p>
+        <p class="text-2xl font-bold text-[#532782]">VIP Program</p>
+      </button>
+    </div>
+
+    <div id="messages" class="space-y-4"></div>
+
+  </main>
+
+</body>
+</html>
