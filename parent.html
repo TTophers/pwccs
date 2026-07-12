@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Peace With Christ Christian School</title>
+  <!-- SEO -->
+  <meta name="description" content="Peace With Christ Christian School in Aurora, Colorado provides Christ-centered education for students from preschool through 8th grade in a caring faith-based community." />
+  <meta name="keywords" content="Peace With Christ Christian School, PWCCS, Christian school Aurora Colorado, Lutheran school Aurora, private school Aurora CO, preschool through 8th grade" />
+  <meta name="author" content="Peace With Christ Christian School" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Peace With Christ Christian School" />
+  <meta property="og:description" content="A Christ-centered education community serving preschool through 8th grade students in Aurora, Colorado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="imgs/favicon-512x512.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imgs/favicon-512x512.png" />
+  <link rel="apple-touch-icon" href="imgs/favicon-512x512.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -237,7 +251,7 @@
     <div class="bg-[#f7f7f7] rounded-lg p-8">
       <h3 class="text-2xl font-light text-[#b7a57a] mb-6">Helpful Links</h3>
       <div class="grid gap-3">
-        <a href="calander.html" class="bg-white border border-gray-200 px-5 py-4 hover:border-[#532782] transition">School Calendar</a>
+        <a href="/imgs/2026-27 school calendar.pdf" class="bg-white border border-gray-200 px-5 py-4 hover:border-[#532782] transition">School Calendar</a>
         <a href="contact.html" class="bg-white border border-gray-200 px-5 py-4 hover:border-[#532782] transition">Contact the Office</a>
         <a href="Me!.html" class="bg-white border border-gray-200 px-5 py-4 hover:border-[#532782] transition">From Student to Creator</a>
         <a href="staff.html" class="bg-white border border-gray-200 px-5 py-4 hover:border-[#532782] transition">Meet Our Staff</a>
@@ -335,12 +349,21 @@
       </p>
     </div>
     <div class="grid grid-cols-2 gap-4">
-      <img src="imgs/untitled-3965.jpg" class="rounded-lg h-40 w-full object-cover" />
-      <img src="imgs/spirit2.jpg" class="rounded-lg h-40 w-full object-cover" />
-      <img src="imgs/spirit3.jpg" class="rounded-lg h-40 w-full object-cover col-span-2" />
+      <img src="imgs/untitled-3965.jpg" onclick="openImage(this.src)" class="cursor-pointer rounded-lg w-full h-auto max-h-72 object-contain bg-white hover:scale-105 transition" />
+      <img src="imgs/School Dress Code Clothing Samples.jpg" onclick="openImage(this.src)" class="cursor-pointer rounded-lg w-full h-auto max-h-72 object-contain bg-white hover:scale-105 transition" />
+      <img src="imgs/stairs-2.jpg" onclick="openImage(this.src)" class="cursor-pointer rounded-lg w-full h-auto max-h-96 object-contain bg-white col-span-2 hover:scale-105 transition" />
     </div>
   </div>
 </section>
+
+<!-- IMAGE LIGHTBOX -->
+<div id="imageModal" class="fixed inset-0 bg-black/80 hidden z-[100] flex items-center justify-center p-6" onclick="closeImage()">
+  <button onclick="closeImage()" class="absolute top-6 right-6 bg-white text-black rounded-full w-14 h-14 text-3xl font-bold shadow-lg hover:bg-gray-200 z-10">
+    ×
+  </button>
+
+  <img id="modalImage" src="" class="max-h-[90vh] max-w-[95vw] object-contain rounded-lg" onclick="event.stopPropagation()" />
+</div>
 
 <!-- CHAPEL FOR FAMILIES -->
 <section class="bg-white py-16 px-6">
@@ -441,13 +464,12 @@
       </h4>
 
       <ul class="space-y-4 text-sm text-gray-700 tracking-wide">
-        <li>HOME</li>
-        <li>GET STARTED</li>
-        <li>UPCOMING EVENTS</li>
-        <li>FASTDIRECT</li>
-        <li>TUITION</li>
-        <li>PARENT HANDBOOK</li>
-        <li>CONTACT US</li>
+        <li><a href="/" class="hover:text-primary transition">HOME</a></li>
+        <li><a href="/getsarted.html" class="hover:text-primary transition">GET STARTED</a></li>
+        <li><a href="https://ssl.fastdir.com/pwclc/" class="hover:text-primary transition">FASTDIRECT</a></li>
+        <li><a href="/caruic.html" class="hover:text-primary transition">TUITION</a></li>
+        <li><a href="/donthaveyet.html" class="hover:text-primary transition">PARENT HANDBOOK</a></li>
+        <li><a href="/contact.html" class="hover:text-primary transition">CONTACT US</a></li>
       </ul>
     </div>
 
@@ -496,4 +518,22 @@
 </script>
 <script src="script.js"></script>
 </body>
+<script>
+  function openImage(src) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeImage() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeImage();
+    }
+  });
+</script>
 </html>
